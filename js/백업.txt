@@ -1,0 +1,11 @@
+$(document).ready(function () {
+   
+  
+      $("#nav_title > ul >li").click(function () {
+        var i = $(this).index();
+        var posy = $(".page").eq(i).offset().top;
+        $("html, body").animate({ scrollTop: posy });
+      });
+    });
+  });
+  

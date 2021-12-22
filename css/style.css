@@ -1,0 +1,479 @@
+﻿@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  background: #f1f1f1;
+}
+.wrapper {
+  width: 100%;
+}
+
+#letterpress .page {
+  height: 1080px;
+  overflow: hidden;
+}
+
+#font_box {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  z-index: 9998;
+}
+#font_box h2 {
+  font-size: 7vw;
+  font-weight: 400;
+  color: aliceblue;
+  margin-top: 5%;
+}
+#font_box h2 > span {
+  color: #000;
+}
+#font_box h4 {
+  width: 100%;
+  font-size: 4vw;
+  font-weight: 400;
+  margin: 3% 0 0 57%;
+}
+#font_box > div {
+  margin: 8% 0 0 19%;
+}
+#font_box a {
+  font-size: 5vw;
+  color: aliceblue;
+}
+#font_box p {
+  font-size: 2vw;
+  color: aliceblue;
+  margin: 25% 0 0 14%;
+}
+#length_box {
+  width: 3%;
+  height: 60%;
+  position: absolute;
+  top: 5%;
+  left: 40.2%;
+  text-align: center;
+  margin-top: 4.8%;
+  z-index: 9997;
+}
+
+#length_box > span {
+  display: block;
+  font-size: 5vw;
+  color: aliceblue;
+  font-weight: 300;
+}
+#length_box > span:first-child {
+  color: #444;
+  margin-top: 30%;
+}
+#length_box > span:nth-child(2) {
+  margin-top: 50%;
+}
+
+#main .main_text {
+  float: right;
+  width: 60%;
+  height: 30%;
+  background-color: rgba(179, 174, 174, 0.616);
+}
+
+#main .main_img {
+  float: right;
+  clear: both;
+  width: 60%;
+  height: 70%;
+  background: url(../images/main_img.jpg) no-repeat 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.7;
+}
+/* title_box2 시작 */
+.title_box2 {
+  width: 100%;
+  height: 50px;
+  margin-left: 25%;
+  display: flex;
+  padding-top: 3%;
+}
+
+.title_box2 > h2 {
+  font-size: 3em;
+  color: #000;
+  font-weight: 500;
+  text-align: right;
+}
+.tb_right_b {
+  width: 80%;
+  height: 100%;
+  margin-left: 1%;
+}
+
+.t_t_line {
+  width: 100%;
+  height: 50%;
+}
+.t_b_line {
+  width: 100%;
+  height: 50%;
+  border-top: 5px solid #739be1;
+  box-sizing: border-box;
+}
+
+/* title_box 끝 */
+/****************** 사이드 부분 ****************/
+
+/* 2번 페이지부터 왼쪽 네비*/
+#nav_bar {
+  width: 40%;
+  height: 100%;
+  z-index: 9995;
+  background-color: #739be1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+#nav_bar .title_box {
+  float: right;
+  margin: 7% 3% 0 0;
+  opacity: 0;
+}
+#nav_bar .title_box > h4 {
+  font-size: 2.9em;
+  color: #fff;
+  font-weight: 600;
+}
+#nav_bar .title_box > h5 {
+  font-size: 2.2em;
+  float: right;
+  color: #000;
+  margin-top: 2%;
+  font-weight: 600;
+}
+
+.contentsBox {
+  float: right;
+  width: 75%;
+  height: 86%;
+  margin-top: 1%;
+  display: flex;
+  overflow: hidden;
+}
+/* 2페이지부터 네비게이션 목록 */
+#nav_title {
+  position: fixed;
+  width: 500px;
+  height: 800px;
+  left: 0;
+  top: 18%;
+  z-index: 9998;
+  opacity: 0;
+}
+#nav_title > ul {
+  width: 30%;
+  height: 800px;
+}
+
+#nav_title > ul > li > a {
+  float: left;
+  display: block;
+  margin: 10% 2% 7% 25%;
+  width: 100%;
+  height: 50px;
+  font-size: 1.7em;
+  line-height: 50px;
+  color: rgba(12, 12, 12, 0.5);
+  text-decoration: none;
+  font-weight: 600;
+}
+#nav_title > ul > li.on a {
+  color: #fff;
+  font-weight: 600;
+}
+
+#nav_title > ul > li > a > i {
+  width: 10%;
+  height: 80%;
+  text-align: center;
+  line-height: 80%;
+  margin-right: 10%;
+}
+#nav_title > ul > li.on a {
+  color: #fff;
+}
+#nav_title > ul > li.on i {
+  color: #fff;
+}
+/* 수정할 부분 */
+#sns_pack {
+  position: fixed;
+  bottom: 7%;
+  left: 4.5%;
+  width: 180px;
+  height: 40px;
+  z-index: 9999;
+  opacity: 0;
+}
+#sns_pack > li {
+  float: left;
+  margin-left: 7%;
+}
+#sns_pack > li:first-child {
+  margin-left: 0;
+}
+
+#sns_pack a > i {
+  font-size: 2.5em;
+  color: #444;
+}
+
+/* Introductions */
+
+#about .contentsBox > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+#about .contentsBox > div > div {
+  width: 100%;
+  height: 100%;
+}
+#about .contentsBox > div > div > ul {
+  margin-top: 10%;
+  border-left: 7px solid #739be1;
+  box-sizing: border-box;
+  padding-left: 3%;
+  padding-bottom: 1%;
+}
+#about .contentsBox > div > div > ul h5 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3%;
+}
+
+#about .contentsBox > div > div > ul > li {
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 1%;
+}
+#about .a_strength li > i {
+  margin-right: 2%;
+}
+#about .a_skills li:nth-child(2) {
+  margin-left: 0.15%;
+}
+#about .a_skills li:nth-child(2) > i:nth-child(2) {
+  margin-left: 2%;
+}
+#about .a_skills li > i {
+  margin-right: 2%;
+}
+/* Experience */
+#experience {
+}
+#experience .contentsBox {
+  display: flex;
+  flex-direction: column;
+}
+#experience .contentsBox > div {
+  width: 100%;
+}
+#experience .contentsBox > div:first-child {
+  height: 95%;
+  background-color: beige;
+}
+#experience .contentsBox > div:last-child {
+  text-align: right;
+  line-height: 200%;
+}
+#experience .contentsBox a {
+  margin-right: 1%;
+  text-decoration: none;
+}
+
+/* project */
+#project {
+  position: relative;
+}
+/* 버튼 */
+#left_btn {
+  position: absolute;
+  top: 50%;
+  left: 22.5%;
+  z-index: 9999;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#right_btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 9999;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#left_btn > a > i,
+#right_btn > a > i {
+  color: rgba(212, 211, 211, 0.637);
+  font-size: 5em;
+}
+#left_btn:hover {
+  left: 22%;
+}
+#right_btn:hover {
+  right: -0.5%;
+}
+#left_btn > a > i:hover,
+#right_btn > a > i:hover {
+  color: #333;
+}
+#ex_txt {
+  position: absolute;
+  bottom: 2%;
+  left: 25%;
+  z-index: 9999;
+  font-size: 1.5em;
+}
+#project .contentsBox {
+  float: right;
+  width: 75%;
+  height: 80%;
+}
+
+#project .gallery {
+  float: right;
+  width: 1380px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#project .cg_box {
+  float: left;
+  /* 슬라이드 총 크기 
+    width 값 1400px 만큼 추가
+  */
+  width: 5580px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+#project .cg_box > div {
+  float: left;
+  width: 680px;
+  height: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-right: 20px;
+  overflow: hidden;
+  z-index: 9999;
+}
+#project .cg_box > div > a {
+  display: block;
+}
+
+#project .cg_box > div:last-child {
+  margin-right: 0;
+}
+/* 작업내용 작성 박스 */
+#project .txt_box > ul > li {
+  margin-bottom: 10%;
+}
+#project .txt_box h4 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5%;
+}
+#project .txt_box span {
+  font-size: 2em;
+  color: #333;
+  font-weight: 600;
+  margin-left: 3%;
+  margin-bottom: 2%;
+}
+
+#project .txt_box p {
+  font-size: 1.5em;
+  color: #333;
+  margin-left: 3%;
+}
+
+#project .txt_box > ul > li:last-child > p:last-child > i {
+  opacity: 0;
+}
+#project .txt_box i {
+  margin-top: 1%;
+  margin-right: 1%;
+}
+#project .con_txt i {
+  opacity: 0;
+}
+#project .con_txt li:nth-child(2) > p > i {
+  opacity: 1;
+}
+
+/* blog */
+#blog .bcb_box {
+  width: 700px;
+  height: 800px;
+  margin-right: 1%;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+#blog .con_txt {
+  margin-top: 5%;
+}
+#blog .con_txt li {
+  margin-bottom: 3%;
+}
+#blog .con_txt li:nth-child(2n) {
+  margin-bottom: 10%;
+}
+
+#blog .b_txt {
+  background-color: #fff;
+}
+#blog .con_txt span {
+  font-size: 2em;
+  color: #333;
+  font-weight: 600;
+  margin-left: 3%;
+}
+
+#blog .con_txt p {
+  font-size: 1.5em;
+  color: #333;
+  margin-left: 3%;
+}
+
+#blog .con_txt i {
+  margin-top: 1%;
+  margin-right: 1%;
+}
+#blog .con_txt li:nth-child(2) > p:nth-child(2) > i {
+  opacity: 0;
+}
+#blog .con_txt li:nth-child(4) > p:nth-child(2n) {
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+/* end */
+#footer {
+  background-color: aquamarine;
+}
+#footer .contentsBox {
+  display: block;
+}
